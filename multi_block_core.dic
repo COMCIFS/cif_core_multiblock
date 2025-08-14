@@ -6,12 +6,12 @@
 #                                                                        #
 ##########################################################################
 
-data_MULTIBLOCK_DIC
+data_CIF_CORE_MULTIBLOCK
 
-    _dictionary.title             MULTIBLOCK_DIC
+    _dictionary.title             CIF_CORE_MULTIBLOCK
     _dictionary.class             Instance
     _dictionary.version           1.1.0
-    _dictionary.date              2026-06-15
+    _dictionary.date              2026-06-17
     _dictionary.uri
 ;\
 https://raw.githubusercontent.com/COMCIFS/cif_multiblock/main/\
@@ -40,19 +40,19 @@ multi_block_core.dic
     any linked and child data names.
 ;
 
-save_MULTIBLOCK_CORE
+save_CIF_CORE_MULTIBLOCK_HEAD
 
-    _definition.id                MULTIBLOCK_CORE
+    _definition.id                CIF_CORE_MULTIBLOCK_HEAD
     _definition.scope             Category
     _definition.class             Head
-    _definition.update            2024-05-15
+    _definition.update            2026-06-17
     _description.text
 ;
-    The MULTIBLOCK_CORE category becomes the overarching category
+    The CIF_CORE_MULTIBLOCK_HEAD category becomes the overarching category
     for all core data names used in one or more data units.
 ;
-    _name.category_id             MULTIBLOCK_DIC
-    _name.object_id               MULTIBLOCK_CORE
+    _name.category_id             CIF_CORE_MULTIBLOCK
+    _name.object_id               CIF_CORE_MULTIBLOCK_HEAD
 
     _import.get
         [
@@ -1122,7 +1122,7 @@ save_MODEL
     _definition.id                MODEL
     _definition.scope             Category
     _definition.class             Set
-    _definition.update            2025-07-07
+    _definition.update            2026-06-17
     _description.text
 ;
     Items in the MODEL Category specify data for the crystal structure
@@ -1131,7 +1131,7 @@ save_MODEL
     described principally in terms of the geometry of the 'connected'
     atom sites and the crystal symmetry in which they reside.
 ;
-    _name.category_id             MULTIBLOCK_CORE
+    _name.category_id             CIF_CORE_MULTIBLOCK_HEAD
     _name.object_id               MODEL
     _category_key.name            '_model.id'
 
@@ -1481,12 +1481,12 @@ save_STRUCTURE
     _definition.id                STRUCTURE
     _definition.scope             Category
     _definition.class             Set
-    _definition.update            2023-10-25
+    _definition.update            2026-06-17
     _description.text
 ;
     A category for collecting information about a crystallographic structure.
 ;
-    _name.category_id             MULTIBLOCK_CORE
+    _name.category_id             CIF_CORE_MULTIBLOCK_HEAD
     _name.object_id               STRUCTURE
     _category_key.name            '_structure.id'
 
@@ -1704,7 +1704,7 @@ save_
 ;
        All multi-block items from core 3.2.0 added.
 ;
-         1.1.0                    2026-06-15
+         1.1.0                    2026-06-17
 ;
        # Update date above and add audit comments below. Remove
        this comment when ready for release.
@@ -1754,5 +1754,7 @@ save_
 
        Added _atom_sites*.structure_id as linked key data name to ATOM_SITES,
        ATOM_SITES_CARTN_TRANSFORM, and ATOM_SITES_FRACT_TRANSFORM.
-;
 
+       Renamed dictionary to CIF_CORE_MULTIBLOCK and adjusted the head
+       category name accordingly.
+;
