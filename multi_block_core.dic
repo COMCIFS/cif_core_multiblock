@@ -1533,6 +1533,18 @@ save_atom_site_aniso.structure_id
 save_
 
     loop_
+      _dictionary_author.id
+      _dictionary_author.name
+      _dictionary_author.id_orcid
+      _dictionary_author.email
+         1               'Hester, James R.'                 0000-0002-2004-8672
+         jxh@ansto.gov.au
+         2               'Vaitkus, Antanas'                 0000-0002-5944-1391
+         antanas.vaitkus@bti.vu.lt
+         3               'Rowles, Matthew R.'               0000-0002-7448-6774
+         .
+
+    loop_
       _dictionary_audit.version
       _dictionary_audit.date
       _dictionary_audit.revision
