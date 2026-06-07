@@ -11,7 +11,7 @@ data_MULTIBLOCK_DIC
     _dictionary.title             MULTIBLOCK_DIC
     _dictionary.class             Instance
     _dictionary.version           1.1.0
-    _dictionary.date              2026-05-19
+    _dictionary.date              2026-06-07
     _dictionary.uri
 ;\
 https://raw.githubusercontent.com/COMCIFS/cif_multiblock/main/\
@@ -1573,7 +1573,7 @@ save_
 ;
        All multi-block items from core 3.2.0 added.
 ;
-         1.1.0                    2026-05-19
+         1.1.0                    2026-06-07
 ;
        # Update date above and add audit comments below. Remove
        this comment when ready for release.
@@ -1618,5 +1618,7 @@ save_
 
        Updated REFLN to include _refln.structure_id (linked to _structure.id)
        as a key data name.
+
+       Added linked, non-key data item _structure.space_group_magn_id.
 ;
 
