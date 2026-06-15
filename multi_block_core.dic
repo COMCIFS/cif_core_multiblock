@@ -11,7 +11,7 @@ data_MULTIBLOCK_DIC
     _dictionary.title             MULTIBLOCK_DIC
     _dictionary.class             Instance
     _dictionary.version           1.1.0
-    _dictionary.date              2026-06-11
+    _dictionary.date              2026-06-15
     _dictionary.uri
 ;\
 https://raw.githubusercontent.com/COMCIFS/cif_multiblock/main/\
@@ -1704,7 +1704,7 @@ save_
 ;
        All multi-block items from core 3.2.0 added.
 ;
-         1.1.0                    2026-06-11
+         1.1.0                    2026-06-15
 ;
        # Update date above and add audit comments below. Remove
        this comment when ready for release.
@@ -1751,5 +1751,8 @@ save_
        as a key data name.
 
        Added _diffrn_refln.diffrn_id is linked key to DIFFRN_REFLN.
+
+       Added _atom_sites*.structure_id as linked key data name to ATOM_SITES,
+       ATOM_SITES_CARTN_TRANSFORM, and ATOM_SITES_FRACT_TRANSFORM.
 ;
 
