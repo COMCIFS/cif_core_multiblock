@@ -11,7 +11,7 @@ data_MULTIBLOCK_DIC
     _dictionary.title             MULTIBLOCK_DIC
     _dictionary.class             Instance
     _dictionary.version           1.1.0
-    _dictionary.date              2026-06-11
+    _dictionary.date              2026-06-15
     _dictionary.uri
 ;\
 https://raw.githubusercontent.com/COMCIFS/cif_multiblock/main/\
@@ -208,6 +208,116 @@ save_audit_dataset.id
     _name.object_id               id
     _type.purpose                 Key
     _type.source                  Related
+    _type.container               Single
+    _type.contents                Word
+
+save_
+
+save_ATOM_SITES
+
+    _definition.id                ATOM_SITES
+    _definition.scope             Category
+    _definition.class             Set
+    _definition.update            2026-06-15
+    _description.text
+;
+    The category of data items used to describe information which applies
+    to all atom sites in a crystal structure.
+;
+    _name.category_id             ATOM
+    _name.object_id               ATOM_SITES
+    _category_key.name            '_atom_sites.structure_id'
+
+save_
+
+save_atom_sites.structure_id
+
+    _definition.id                '_atom_sites.structure_id'
+    _definition.update            2026-06-15
+    _description.text
+;
+    A code identifying the crystallographic structure associated with this atom
+    sites description.
+;
+    _name.category_id             atom_sites
+    _name.object_id               structure_id
+    _name.linked_item_id          '_structure.id'
+    _type.purpose                 Link
+    _type.source                  Assigned
+    _type.container               Single
+    _type.contents                Word
+
+save_
+
+save_ATOM_SITES_CARTN_TRANSFORM
+
+    _definition.id                ATOM_SITES_CARTN_TRANSFORM
+    _definition.scope             Category
+    _definition.class             Set
+    _definition.update            2026-06-15
+    _description.text
+;
+    The category of data items used to describe the matrix elements
+    used to transform fractional coordinates into Cartesian coordinates
+    of all atom sites in a crystal structure.
+;
+    _name.category_id             ATOM_SITES
+    _name.object_id               ATOM_SITES_CARTN_TRANSFORM
+    _category_key.name            '_atom_sites_Cartn_transform.structure_id'
+
+save_
+
+save_atom_sites_cartn_transform.structure_id
+
+    _definition.id                '_atom_sites_Cartn_transform.structure_id'
+    _definition.update            2026-06-15
+    _description.text
+;
+    A code identifying the crystallographic structure associated with this atom
+    sites Cartesian coordinate transform.
+;
+    _name.category_id             atom_sites_Cartn_transform
+    _name.object_id               structure_id
+    _name.linked_item_id          '_structure.id'
+    _type.purpose                 Link
+    _type.source                  Assigned
+    _type.container               Single
+    _type.contents                Word
+
+save_
+
+save_ATOM_SITES_FRACT_TRANSFORM
+
+    _definition.id                ATOM_SITES_FRACT_TRANSFORM
+    _definition.scope             Category
+    _definition.class             Set
+    _definition.update            2026-06-15
+    _description.text
+;
+    The category of data items used to describe the matrix elements
+    used to transform Cartesian coordinates into fractional coordinates
+    of all atom sites in a crystal structure.
+;
+    _name.category_id             ATOM_SITES
+    _name.object_id               ATOM_SITES_FRACT_TRANSFORM
+    _category_key.name            '_atom_sites_fract_transform.structure_id'
+
+save_
+
+save_atom_sites_fract_transform.structure_id
+
+    _definition.id                '_atom_sites_fract_transform.structure_id'
+    _definition.update            2026-06-15
+    _description.text
+;
+    A code identifying the crystallographic structure associated with this atom
+    sites fractional coordinate transform.
+;
+    _name.category_id             atom_sites_fract_transform
+    _name.object_id               structure_id
+    _name.linked_item_id          '_structure.id'
+    _type.purpose                 Link
+    _type.source                  Assigned
     _type.container               Single
     _type.contents                Word
 
@@ -1594,7 +1704,7 @@ save_
 ;
        All multi-block items from core 3.2.0 added.
 ;
-         1.1.0                    2026-06-11
+         1.1.0                    2026-06-15
 ;
        # Update date above and add audit comments below. Remove
        this comment when ready for release.
@@ -1641,5 +1751,8 @@ save_
        as a key data name.
 
        Added _diffrn_refln.diffrn_id is linked key to DIFFRN_REFLN.
+
+       Added _atom_sites*.structure_id as linked key data name to ATOM_SITES,
+       ATOM_SITES_CARTN_TRANSFORM, and ATOM_SITES_FRACT_TRANSFORM.
 ;
 
