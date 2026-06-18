@@ -1,6 +1,6 @@
-[![CIF dictionary check](https://github.com/COMCIFS/MultiBlock_Dictionary/actions/workflows/main.yml/badge.svg)](https://github.com/COMCIFS/MultiBlock_Dictionary/actions)
+[![CIF dictionary check](https://github.com/COMCIFS/cif_core_multiblock/actions/workflows/main.yml/badge.svg)](https://github.com/COMCIFS/cif_core_multiblock/actions)
 
-# MultiBlock_Dictionary
+# Multiblock coreCIF dictionary
 
 Definitions describing data stored in multiple containers
 
@@ -26,7 +26,7 @@ only contain one set of diffraction conditions (one temperature, one
 pressure) and describe data from one crystal. In order for more complex
 experiments to be described, data can be distributed over multiple data
 blocks. The multiblock dictionary provides category and data name definitions
-to enable such multi-block data sets to be correctly combined.
+to enable such multiblock data sets to be correctly combined.
 
 ## Changes to CIF core category definitions
 

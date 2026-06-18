@@ -14,7 +14,7 @@ data_CIF_CORE_MULTIBLOCK
     _dictionary.date              2026-06-17
     _dictionary.uri
 ;\
-https://raw.githubusercontent.com/COMCIFS/cif_multiblock/main/\
+https://raw.githubusercontent.com/COMCIFS/cif_core_multiblock/main/\
 cif_core_multiblock.dic
 ;
     _dictionary.ddl_conformance   4.2.0
