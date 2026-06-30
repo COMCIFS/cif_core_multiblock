@@ -1709,29 +1709,13 @@ save_
 ;
          1.1.0                    2026-06-17
 ;
-       # Update date above and add audit comments below. Remove
-       this comment when ready for release.
-
-       Add STRUCTURE and related data names and links.
-
-       Update definitions of _cell.structure_id and
-       _cell_measurement.structure_id. Removed _cell.diffrn_id.
-
-       Update the CIF_CORE dictionary import statement with the new Head
-       category name.
-
-       Added _diffrn_radiation.diffrn_id as key for diffrn_radiation
-       category.
+       Add STRUCTURE and related data names and links, including
+       REFLN, CELL, ATOM_SITE, and ATOM_SITES_* categories.
 
        Added AUDIT_DATASET.
 
-       Renamed _space_group_generator.key to _space_group_generator.id
-       to reflect changes in the CIF_CORE dictionary.
-
-       Added _model.id as key to MODEL.
-
-       Added GEOM_* and MODEL_SITE categories with _model.id child key data
-       names.
+       Added _model.id as key to MODEL and added child key data names
+       to GEOM_* and MODEL_SITE categories.
 
        Add DIFFRN_SOURCE category with _diffrn_source.radiation_id key data
        name.
@@ -1747,16 +1731,7 @@ save_
        Included _diffrn_measurement.diffrn_id to maintain compatibility with
        imgCIF.
 
-       Updated type contents of _diffrn_detector.id to match the mmCIF/PDBx
-       type.
-
-       Updated REFLN to include _refln.structure_id (linked to _structure.id)
-       as a key data name.
-
        Added _diffrn_refln.diffrn_id is linked key to DIFFRN_REFLN.
-
-       Added _atom_sites*.structure_id as linked key data name to ATOM_SITES,
-       ATOM_SITES_CARTN_TRANSFORM, and ATOM_SITES_FRACT_TRANSFORM.
 
        Renamed dictionary to CIF_CORE_MULTIBLOCK and adjusted the head
        category name accordingly.
