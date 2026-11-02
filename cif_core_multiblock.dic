@@ -22,7 +22,7 @@ cif_core_multiblock.dic
     _dictionary.namespace         CifCore
     _description.text
 ;
-    The multi block dictionary adds data names to the core dictionary which
+    The multi-block dictionary adds data names to the core dictionary which
     allow description of data spread over multiple data units (blocks).
 
     Under the default schema, all data names in Set categories must be
@@ -69,8 +69,9 @@ save_ATOM_SITES
     _definition.update            2026-06-15
     _description.text
 ;
-    The category of data items used to describe information which applies
-    to all atom sites in a crystal structure.
+    Data items in the ATOM_SITES category record details common
+    to all atom sites, such as general structure solution strategy
+    and coordinate transformations.
 ;
     _name.category_id             ATOM
     _name.object_id               ATOM_SITES
@@ -84,8 +85,8 @@ save_atom_sites.structure_id
     _definition.update            2026-06-15
     _description.text
 ;
-    A code identifying the crystallographic structure associated with this atom
-    sites description.
+    A code identifying the crystallographic structure associated with
+    this description of the atom sites.
 ;
     _name.category_id             atom_sites
     _name.object_id               structure_id
@@ -105,7 +106,7 @@ save_ATOM_SITES_CARTN_TRANSFORM
     _definition.update            2026-06-15
     _description.text
 ;
-    The category of data items used to describe the matrix elements
+    The category of data items which describe the matrix elements
     used to transform fractional coordinates into Cartesian coordinates
     of all atom sites in a crystal structure.
 ;
@@ -121,8 +122,8 @@ save_atom_sites_cartn_transform.structure_id
     _definition.update            2026-06-15
     _description.text
 ;
-    A code identifying the crystallographic structure associated with this atom
-    sites Cartesian coordinate transform.
+    A code identifying the crystallographic structure associated with this
+    Cartesian coordinate transform applied to the atom sites.
 ;
     _name.category_id             atom_sites_Cartn_transform
     _name.object_id               structure_id
@@ -142,7 +143,7 @@ save_ATOM_SITES_FRACT_TRANSFORM
     _definition.update            2026-06-15
     _description.text
 ;
-    The category of data items used to describe the matrix elements
+    The category of data items which describe the matrix elements
     used to transform Cartesian coordinates into fractional coordinates
     of all atom sites in a crystal structure.
 ;
@@ -158,8 +159,8 @@ save_atom_sites_fract_transform.structure_id
     _definition.update            2026-06-15
     _description.text
 ;
-    A code identifying the crystallographic structure associated with this atom
-    sites fractional coordinate transform.
+    A code identifying the crystallographic structure associated with this
+    fractional coordinate transform applied to the atom sites.
 ;
     _name.category_id             atom_sites_fract_transform
     _name.object_id               structure_id
@@ -179,7 +180,8 @@ save_DIFFRN
     _definition.update            2022-05-09
     _description.text
 ;
-    The CATEGORY of data items used to describe the diffraction experiment.
+    Data items in the DIFFRN category record details about the
+    intensity measurements.
 ;
     _name.category_id             DIFFRACTION
     _name.object_id               DIFFRN
@@ -212,7 +214,7 @@ save_diffrn.diffrn_measurement_id
     _definition.update            2026-04-22
     _description.text
 ;
-    Identifies the particular combination of sample mounting, positioning,
+    Identifies the particular combination of sample mounting, positioning
     and measurement strategy used to collect the diffraction data. This is
     a pointer to _diffrn_measurement.id.
 ;
@@ -271,8 +273,8 @@ save_DIFFRN_MEASUREMENT
     _definition.update            2026-04-22
     _description.text
 ;
-    The category of data items used to describe the sample mounting,
-    positioning, and measurement strategy.
+    Data items in the DIFFRN_MEASUREMENT category describe
+    the sample mounting, positioning and measurement strategy.
 ;
     _name.category_id             DIFFRACTION
     _name.object_id               DIFFRN_MEASUREMENT
@@ -308,7 +310,7 @@ save_diffrn_measurement.id
     _description.text
 ;
     Unique identifier for a particular combination of sample mount,
-    positioner, and scan strategy.
+    positioner and scan strategy.
 ;
     _name.category_id             diffrn_measurement
     _name.object_id               id
@@ -332,8 +334,8 @@ save_CELL
     _definition.update            2023-03-02
     _description.text
 ;
-    The CATEGORY of data items used to describe the parameters of
-    the crystal unit cell.
+    Data items in the CELL category record details about the
+    crystal unit-cell parameters.
 ;
     _name.category_id             DIFFRN
     _name.object_id               CELL
@@ -368,8 +370,8 @@ save_CELL_MEASUREMENT
     _definition.update            2022-05-25
     _description.text
 ;
-    The CATEGORY of data items used to describe the measurement of
-    the cell parameters.
+    Data items in the CELL_MEASUREMENT category are used to describe the
+    measurement of the crystallographic unit-cell parameters.
 ;
     _name.category_id             CELL
     _name.object_id               CELL_MEASUREMENT
@@ -384,7 +386,7 @@ save_cell_measurement.condition_id
     _description.text
 ;
     A pointer to the diffraction conditions used for cell measurement,
-    where different to the diffraction conditions used for data
+    where different from the diffraction conditions used for data
     collection.
 ;
     _name.category_id             cell_measurement
@@ -408,8 +410,8 @@ save_cell_measurement.diffrn_id
     _definition.update            2023-10-26
     _description.text
 ;
-    A pointer to the diffraction experiment to which the measured cell
-    has been applied.
+    A pointer to the diffraction experiment to which these properties
+    of the cell measurement apply.
 ;
     _name.category_id             cell_measurement
     _name.object_id               diffrn_id
@@ -447,8 +449,9 @@ save_CELL_MEASUREMENT_REFLN
     _definition.update            2023-10-16
     _description.text
 ;
-    The CATEGORY of data items used to describe the reflection data
-    used in the measurement of the crystal unit cell.
+    Data items in the CELL_MEASUREMENT_REFLN category record
+    details about the reflections used in the determination of the
+    crystallographic cell parameters.
 ;
     _name.category_id             CELL_MEASUREMENT
     _name.object_id               CELL_MEASUREMENT_REFLN
@@ -488,8 +491,9 @@ save_DIFFRN_DETECTOR
     _definition.update            2025-06-30
     _description.text
 ;
-    The category of data items which specify the detectors used
-    in the measurement of diffraction intensities.
+    Data items in the DIFFRN_DETECTOR category describe the
+    detector used to measure the scattered radiation, including
+    any analyser and post-sample collimation.
 ;
     _name.category_id             DIFFRN
     _name.object_id               DIFFRN_DETECTOR
@@ -547,10 +551,10 @@ save_DIFFRN_RADIATION
     _definition.update            2024-11-12
     _description.text
 ;
-    The CATEGORY of data items which specify the wavelength of the
-    radiation used in measuring diffraction intensities. To identify
-    and assign weights to distinct wavelength components from a
-    polychromatic beam, see DIFFRN_RADIATION_WAVELENGTH.
+    Data items in the DIFFRN_RADIATION category describe the
+    radiation used in measuring diffraction intensities. To identify and
+    assign weights to distinct wavelength components from a polychromatic
+    beam, see DIFFRN_RADIATION_WAVELENGTH.
 ;
     _name.category_id             DIFFRACTION
     _name.object_id               DIFFRN_RADIATION
@@ -604,10 +608,11 @@ save_DIFFRN_RADIATION_WAVELENGTH
     _definition.update            2024-11-12
     _description.text
 ;
-    The CATEGORY of data items which specify the wavelength of the
-    radiation used in measuring diffraction intensities. Items may be
-    looped to identify and assign weights to distinct wavelength
-    components from a polychromatic beam.
+    Data items in the DIFFRN_RADIATION_WAVELENGTH category describe
+    the wavelength of the radiation used in measuring the diffraction
+    intensities. Items may be looped to identify and assign weights to
+    distinct wavelength components from a polychromatic beam.
+
 ;
     _name.category_id             DIFFRN_RADIATION
     _name.object_id               DIFFRN_RADIATION_WAVELENGTH
@@ -645,7 +650,8 @@ save_DIFFRN_REFLN
     _definition.update            2026-06-11
     _description.text
 ;
-    The category of data items which specify the reflection measurements,
+    Data items in the DIFFRN_REFLN category record details about
+    the intensities measured in the diffraction experiment,
     prior to data reduction and merging.
 ;
     _name.category_id             DIFFRN
@@ -685,7 +691,8 @@ save_DIFFRN_SOURCE
     _definition.update            2025-06-18
     _description.text
 ;
-    The category of data items which specify information about the
+    Data items in the DIFFRN_SOURCE category record details of
+    the source of radiation used in the diffraction experiment.
     radiation source.
 ;
     _name.category_id             DIFFRN
@@ -721,8 +728,8 @@ save_REFLN
     _definition.update            2026-05-19
     _description.text
 ;
-    The category of data items used to describe the reflection data
-    used in the refinement of a crystallographic structure model.
+    Data items in the REFLN category record details about the
+    reflections used to determine the ATOM_SITE data items.
 ;
     _name.category_id             DIFFRACTION
     _name.object_id               REFLN
@@ -761,8 +768,9 @@ save_EXPTL_CRYSTAL
     _definition.update            2022-05-09
     _description.text
 ;
-    The CATEGORY of data items used to specify information about
-    crystals used in the diffraction measurements.
+    Data items in the EXPTL_CRYSTAL category record details about
+    experimental measurements on the crystal or crystals used,
+    such as shape, size or density.
 ;
     _name.category_id             EXPTL
     _name.object_id               EXPTL_CRYSTAL
@@ -796,7 +804,7 @@ save_SPACE_GROUP
     _definition.update            2023-10-16
     _description.text
 ;
-    The CATEGORY of data items used to specify space group
+    Data items in the SPACE_GROUP category are used to specify space-group
     information about the crystal used in the diffraction measurements.
 
     Space-group types are identified by their number as listed in
@@ -806,7 +814,7 @@ save_SPACE_GROUP
     symmetry operations or generators, or by giving the
     transformation that relates the specific setting to the
     reference setting based on International Tables Volume A and
-    stored in this dictionary.
+    stored in the core CIF dictionary.
 
     The commonly used Hermann-Mauguin symbol determines the
     space-group type uniquely, but several different Hermann-Mauguin
@@ -814,9 +822,9 @@ save_SPACE_GROUP
     Hermann-Mauguin symbol contains information on the choice of
     the basis, but not on the choice of origin.
 
-    Ref: International Tables for Crystallography (2002). Volume A,
-         Space-group symmetry, edited by Th. Hahn, 5th ed.
-         Dordrecht: Kluwer Academic Publishers.
+    Ref: International Tables for Crystallography (2016). Volume A,
+         Space-group symmetry, edited by M. I. Aroyo, 6th ed.
+         Chichester: John Wiley & Sons.
 ;
     _name.category_id             EXPTL
     _name.object_id               SPACE_GROUP
@@ -833,7 +841,7 @@ save_space_group.id
     Unique identifier for a space group.
 
     Two space groups can share the same identifier if and only if they have
-    the same space group name, number, setting, and have their symmetry
+    the same space group name, number and setting, and have their symmetry
     operations listed with the same symop ids (see SPACE_GROUP_SYMOP).
 ;
     _name.category_id             space_group
@@ -853,8 +861,8 @@ save_SPACE_GROUP_GENERATOR
     _definition.update            2025-04-29
     _description.text
 ;
-    The CATEGORY of data items used to list generators for
-    the space group
+    Data items in the SPACE_GROUP_GENERATOR category list
+    generators for a space group.
 ;
     _name.category_id             SPACE_GROUP
     _name.object_id               SPACE_GROUP_GENERATOR
@@ -892,8 +900,8 @@ save_SPACE_GROUP_SYMOP
     _definition.update            2023-10-16
     _description.text
 ;
-    The CATEGORY of data items used to describe symmetry equivalent sites
-    in the crystal unit cell.
+    Data items in the SPACE_GROUP_SYMOP category are used to
+    describe symmetry-equivalent sites in the crystal unit cell.
 ;
     _name.category_id             SPACE_GROUP
     _name.object_id               SPACE_GROUP_SYMOP
@@ -931,7 +939,8 @@ save_SPACE_GROUP_WYCKOFF
     _definition.update            2023-10-16
     _description.text
 ;
-    Contains information about Wyckoff positions of a space group.
+    Data items in the SPACE_GROUP_WYCKOFF category
+    contain information about Wyckoff positions of a space group.
     Only one site can be given for each special position, but the
     remainder can be generated by applying the symmetry operations
     stored in _space_group_symop.operation_xyz.
@@ -973,7 +982,7 @@ save_MODEL
     _definition.update            2026-06-17
     _description.text
 ;
-    Items in the MODEL Category specify data for the crystal structure
+    Data items in the MODEL category specify data for the crystal structure
     postulated and modelled from the atomic coordinates derived and
     refined from the diffraction information. The structural model is
     described principally in terms of the geometry of the 'connected'
@@ -1028,19 +1037,18 @@ save_GEOM
     _definition.update            2025-06-04
     _description.text
 ;
-    The CATEGORY of data items used to specify the geometry
-    of the structural model as derived from the atomic sites.
-    The geometry is expressed in terms of the interatomic
-    angles (GEOM_ANGLE data), covalent bond distances
-    (GEOM_BOND data), contact distances (GEOM_CONTACT data),
-    hydrogen bonds (GEOM_HBOND data) and torsion geometry
-    (GEOM_TORSION data).
+    Data items in the GEOM category describe aspects of the overall
+    geometry of the structural model as derived from the atomic sites.
+    The detailed geometry is expressed in terms of the interatomic
+    angles (GEOM_ANGLE data), covalent bond distances (GEOM_BOND
+    data), contact distances (GEOM_CONTACT data), hydrogen bonds
+    (GEOM_HBOND data) and torsion geometry (GEOM_TORSION data).
     Geometry data are usually redundant, in that they can be
     calculated from other more fundamental quantities in the data
-    block. However, they serve the dual purposes of providing a
-    check on the correctness of both sets of data and of enabling
-    the most important geometric data to be identified for
-    publication by setting the appropriate publication flag.
+    block. However, they serve the dual purposes of providing a check
+    on the correctness of both sets of data and of enabling the most
+    important geometric data to be identified for publication by
+    setting the appropriate publication flag.
 ;
     _name.category_id             MODEL
     _name.object_id               GEOM
@@ -1074,8 +1082,8 @@ save_GEOM_ANGLE
     _definition.update            2025-06-04
     _description.text
 ;
-    The CATEGORY of data items used to specify the geometry angles in the
-    structural model as derived from the atomic sites.
+    Data items in the GEOM_ANGLE category specify the geometry
+    angles in the structural model as derived from the atomic sites.
 ;
     _name.category_id             GEOM
     _name.object_id               GEOM_ANGLE
@@ -1118,7 +1126,7 @@ save_GEOM_BOND
     _definition.update            2025-06-04
     _description.text
 ;
-    The CATEGORY of data items used to specify the geometry bonds in the
+    Data items in the GEOM_BOND category specify the geometry bonds in the
     structural model as derived from the atomic sites.
 ;
     _name.category_id             GEOM
@@ -1160,7 +1168,7 @@ save_GEOM_CONTACT
     _definition.update            2025-06-04
     _description.text
 ;
-    The CATEGORY of data items used to specify the interatomic
+    Data items in the GEOM_CONTACT category specify the interatomic
     contact distances in the structural model.
 ;
     _name.category_id             GEOM
@@ -1202,6 +1210,7 @@ save_GEOM_HBOND
     _definition.update            2025-06-04
     _description.text
 ;
+    Data items in the GEOM_HBOND category specify the hydrogen bond
     The CATEGORY of data items used to specify the hydrogen bond
     distances in the structural model as derived from atomic sites.
 ;
@@ -1246,7 +1255,7 @@ save_GEOM_TORSION
     _definition.update            2025-06-04
     _description.text
 ;
-    The CATEGORY of data items used to specify the torsion angles in the
+    Data items in the GEOM_TORSION category specify the torsion angles in the
     structural model as derived from the atomic sites.
 ;
     _name.category_id             GEOM
@@ -1292,8 +1301,8 @@ save_MODEL_SITE
     _definition.update            2025-06-04
     _description.text
 ;
-    The CATEGORY of data items used to describe atomic sites and
-    connections in the proposed atomic model.
+    Data items in the MODEL_SITE category are used to describe
+    atomic sites and connections in the proposed atomic model.
 ;
     _name.category_id             MODEL
     _name.object_id               MODEL_SITE
@@ -1402,8 +1411,9 @@ save_ATOM_SITE
     _definition.update            2023-10-16
     _description.text
 ;
-    The CATEGORY of data items used to describe atom site information
-    used in crystallographic structure studies.
+    Data items in the ATOM_SITE category record details about
+    the atom sites in a crystal structure, such as the positional
+    coordinates and atomic displacement parameters.
 ;
     _name.category_id             ATOM
     _name.object_id               ATOM_SITE
@@ -1471,8 +1481,8 @@ save_ATOM_SITE
          are assigned to disorder group '1' and disorder group '2'
          respectively.
 
-         The example was created based on data from:
-             Li, Ang et al. (2021). Dalton Transactions, 50(2), 681-688.
+         Example based on data from:
+             Li, A. et al. (2021). Dalton Trans. 50, 681-688.
              https://doi.org/10.1039/d0dt03269g
 ;
 
@@ -1504,8 +1514,9 @@ save_ATOM_SITE_ANISO
     _definition.update            2023-10-16
     _description.text
 ;
-    The CATEGORY of data items used to describe the anisotropic atomic
-    displacement parameters of the atomic sites in a crystal structure.
+    Data items in the ATOM_SITE_ANISO category are used to describe the
+    anisotropic atomic displacement parameters of the atomic sites in a
+    crystal structure.
 ;
     _name.category_id             ATOM_SITE
     _name.object_id               ATOM_SITE_ANISO
