@@ -1411,7 +1411,7 @@ save_ATOM_SITE
     _definition.update            2023-10-16
     _description.text
 ;
-    Data items in the \cifcategory{ATOM_SITE} category record details about
+    Data items in the ATOM_SITE category record details about
     the atom sites in a crystal structure, such as the positional
     coordinates and atomic displacement parameters.
 ;
