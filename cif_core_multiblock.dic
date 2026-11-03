@@ -56,7 +56,8 @@ save_CIF_CORE_MULTIBLOCK_HEAD
 
     _import.get
         [
-         {'dupl':Ignore  'file':cif_core.dic  'mode':Full  'save':CIF_CORE_HEAD}
+         {'dupl':Ignore  'file':https://doi.org/10.1107/cifdic_core_3.3.0
+          'mode':Full  'save':CIF_CORE_HEAD}
         ]
 
 save_
